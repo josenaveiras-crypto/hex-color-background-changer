@@ -1,48 +1,26 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
- <meta charset="UTF-8">
- <meta name="viewport" content="width=device-width, initial-scale=1.0">
- <meta http-equiv="X-UA-Compatible" content="ie=edge">
- <!-- bootstrap css -->
- <link rel="stylesheet" href="css/bootstrap.min.css">
- <!-- main css -->
- <link rel="stylesheet" href="css/main.css">
- <!-- google fonts -->
- <link href="https://fonts.googleapis.com/css?family=Courgette" rel="stylesheet">
-
- <!-- font awesome -->
- <script src="js/all.js"></script>
- <title>Hex Color</title>
- <style>
- </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Hex Color Square</title>
+  <link rel="stylesheet" href="css/main.css">
 </head>
 
 <body>
+  <main class="app">
+    <div class="card">
+      <h1 class="title">hex color: <span id="hex-value">#FFFFFF</span></h1>
 
- <div class="container">
-  <div class="row max-height align-items-center">
-   <div class="col-10 col-md-6 mx-auto text-center">
-    <h1 class=text-uppercase>hex color :<span id="hex-value"></span></h1>
-    <a href="#" id="btn" class="btn btn-secondary text-uppercase my-2">click me</a>
-   </div>
-  </div>
- </div>
+      <div id="color-box" class="color-box" aria-label="Color square"></div>
 
+      <button id="btn" class="btn" type="button">Click me</button>
+    </div>
+  </main>
 
-
-
-
- <!-- jquery -->
- <script src="js/jquery-3.3.1.min.js"></script>
- <!-- bootstrap js -->
- <script src="js/bootstrap.bundle.min.js"></script>
- <!-- script js -->
- <script src="js/app.js"></script>
- <!-- utils js -->
- <script src="js/utils.js"></script>
-
+  <script src="js/app.js"></script>
 </body>
 
 </html>

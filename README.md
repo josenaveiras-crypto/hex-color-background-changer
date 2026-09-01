@@ -1,25 +1,56 @@
-# Cambiar el color de fondo -  hexadecimal
-Queremos que, al hacer clic en el botón "Click me!" , cambie el color del body a un color aleatorio
+# Cambiar el color de un cuadrado hexadecimal
+
+Este ejercicio consiste en generar un color hexadecimal aleatorio al pulsar un botón y aplicarlo a un cuadrado concreto del DOM, en lugar de cambiar el fondo completo de la página.
+
+## Qué incluye esta versión
+
+- HTML sencillo y limpio.
+- CSS sin dependencias externas ni Bootstrap.
+- Un elemento con ID llamado `color-box` que cambia de color al hacer clic.
+- Un texto con el valor hexadecimal actual.
+
+## Estructura
+
+- `index.html`: contiene el botón y el cuadrado que cambia de color.
+- `css/main.css`: estilos con CSS puro.
+- `js/app.js`: lógica para generar y aplicar el color hexadecimal.
 
 ## Pasos a seguir
 
-0. Implementa tu solución en __js/app.js__ y en __index.html__
-1. Intenta primero simplemente recuperar el elemento del DOM al que debes aplicar el evento __click__
-2. Comprueba que eres capaz de aplicarlo, haciendo una prueba simple, como por ejemplo, que al hacer clic, muestre un mensaje por la consola.
-3. Después, haz que al hacer clic en el botón, el fondo del __body__ cambie el color azul hexadecimal
-4. Piensa en como separar cada una de las metas que quieres conseguir. Por ejemplo, usa al menos **dos funciones**. Una para generar un color hexadecimal aleatorio, y otra función que se va a encargar de gestionar el evento __click__
-5. Puedes buscar por internet como generar un código hexadecimal de forma aleatoria, pero intenta pensarlo por ti mismo/a antes. En todo caso, echa un vistazo a la restricción número dos del siguiente apartado.
-
-Finalmente, en __js/solution_provided__ tienes una solución del autor original.
+1. Abre `index.html` y observa cómo está estructurado el cuadrado y el botón.
+2. Busca los elementos del DOM con `querySelector`.
+3. Comprueba que el evento `click` funciona con una prueba simple en la consola.
+4. Genera un color hexadecimal aleatorio con una función.
+5. Actualiza el `backgroundColor` del cuadrado y el texto del valor hexadecimal.
+6. Haz que el cambio también se produzca al cargar la página para ver un color inicial.
 
 ## Restricciones
 
-1. NO copies/pegues una línea de código. Ni siquiera de tu ejercicio anterior. El objetivo es que obtengas soltura y entendimiento en los datos que estás tratando.
+1. No copies y pegues una solución completa; intenta entender cada línea.
+2. Separa la lógica en funciones pequeñas y claras.
+3. Mantén el ejercicio simple y legible.
 
-## Demo del proyecto
+## Función para obtener un color hexadecimal aleatorio
 
-[Demo](https://js-beginners.github.io/hex-color-background-changer/)
+```js
+function getRandomHexColor() {
+  const hexValues = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'A', 'B', 'C', 'D', 'E', 'F'];
+  let hexColor = '#';
 
-## Otras soluciones
+  for (let i = 0; i < 6; i++) {
+    const randomIndex = Math.floor(Math.random() * hexValues.length);
+    hexColor += hexValues[randomIndex];
+  }
 
-Solución usando la función getComputedProperty para obtener el color CSS computado de un elemento del DOM, por [Fabián Taranto](https://github.com/fataranto/background-color-switcher)
+  return hexColor;
+}
+```
+
+Esta función genera una cadena como `#A1B2C3` y luego se usa para cambiar el `backgroundColor` del cuadrado.
+
+## Cómo probarlo
+
+1. Abre el index.html con el Live Server.
+2. Haz clic en el botón.
+3. El cuadrado debe cambiar de color y mostrarse el código hexadecimal.
+
