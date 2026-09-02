@@ -27,8 +27,9 @@ Este ejercicio consiste en generar un color hexadecimal aleatorio al pulsar un b
 ## Restricciones
 
 1. No copies y pegues una solución completa; intenta entender cada línea.
-2. Separa la lógica en funciones pequeñas y claras.
-3. Mantén el ejercicio simple y legible.
+2. No copies y pegues el ejercicio en la IA. Por contra, pide que te ayude en cómo realizar parte de las tareas con ejemplos y explicaciones. O puedes copiar todo el ejercicio y pedirle explicitamente que te ayude paso a paso pero sin dar la solución.
+3. Separa la lógica en funciones pequeñas y claras.
+4. Mantén el ejercicio simple y legible.
 
 ## Función para obtener un color hexadecimal aleatorio
 
